@@ -20,6 +20,86 @@ body {
   background-color: #fff;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("img/hero.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Halbtransparente Overlay, um Text besser lesbar zu machen */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(64, 0, 19, 0.3); /* leicht dunkles Overlay */
+  z-index: 1;
+}
+
+/* Inhalt zentrieren */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-light);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--color-light);
+  text-transform: uppercase;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: var(--color-main);
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 40px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+}
 /* --- Video Section --- */
 
 .video-section {
