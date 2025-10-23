@@ -180,3 +180,20 @@ body {
   width: 40px;
   margin: 0 1rem;
 }
+
+/* --- Responsiveness --- */
+@media (max-width: 600px) {
+  .video-section h2,
+  .vorteile h2,
+  .kontakt h2 {
+    font-size: 1.5rem;
+  }
+
+  .kontakt-form {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
