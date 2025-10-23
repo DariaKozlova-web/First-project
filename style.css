@@ -129,3 +129,54 @@ body {
 .kontakt-form button:hover {
   background: var(--color-secondary);
 }
+
+/* --- Footer --- */
+.footer {
+  background: var(--color-dark);
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-nav h4 {
+  margin-bottom: 10px;
+}
+
+.footer-nav li {
+  list-style: none;
+}
+
+.footer-nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icons img {
+  width: 40px;
+  margin: 0 1rem;
+}
