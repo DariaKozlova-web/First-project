@@ -53,3 +53,36 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.vorteile {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vorteile h2 {
+  color: var(--color-main);
+  margin-bottom: 40px;
+}
+
+.vorteile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.vorteil-item {
+  background: var(--color-light);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.vorteil-item:hover {
+  transform: translateY(-5px);
+}
+
+.vorteil-item img {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 10px;
+}
