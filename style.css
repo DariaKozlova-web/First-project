@@ -138,6 +138,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease;
+  height: 99%;
 }
 
 .kollektion-item img {
@@ -185,6 +186,28 @@ body {
 @media (max-width: 480px) {
   .kollektion-intro p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* .kollektion {
+    padding: 80px 40px;
+  } */
+
+  .kollektion-grid {
+    grid-template-columns: 1fr; /* Nur eine Spalte */
+    gap: 10vw;
+  }
+
+  .kollektion-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .overlay {
+    justify-content: center;
+    padding: 20px;
   }
 }
 /* --- Video Section --- */
@@ -341,6 +364,7 @@ body {
   background: var(--color-dark);
   color: #fff;
   padding: 100px 80px;
+  text-align: center;
 }
 
 .footer-nav {
