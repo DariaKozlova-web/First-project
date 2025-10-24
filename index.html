@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <title>Luna Mode Fashion Store</title>
   </head>
   <body>
@@ -76,6 +77,10 @@
       <!-- Video section -->
       <section class="video-section">
         <h2>Unsere Vorstellung</h2>
+        <p class="video-description">
+          Ein Blick hinter die Kulissen - entdecke, wie unsere nachhaltige Mode
+          entsteht
+        </p>
         <div class="video-wrapper">
           <div class="video-container">
             <iframe
@@ -118,6 +123,14 @@
           Haben Sie Fragen oder Anregungen? Wir freuen uns, von Ihnen zu hören!
         </p>
         <form class="kontakt-form">
+          <label for="name">Name *</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Eingeben name"
+            required
+          />
           <label for="email">Email *</label>
           <input
             type="email"
@@ -136,45 +149,43 @@
           <button type="submit">Einreichen</button>
         </form>
       </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-nav">
-          <div>
-            <h4>DAMEN</h4>
-            <ul>
-              <li><a href="#">Kleider</a></li>
-              <li><a href="#">Jacken</a></li>
-              <li><a href="#">Accessoires</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>HERREN</h4>
-            <ul>
-              <li><a href="#">T-Shirts</a></li>
-              <li><a href="#">Hosen</a></li>
-              <li><a href="#">Schuhe</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>SERVICE</h4>
-            <ul>
-              <li><a href="#">Kontakt</a></li>
-              <li><a href="#">Versand</a></li>
-              <li><a href="#">Rückgabe</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Luna Mode. Alle Rechte vorbehalten.</p>
-          <div class="payment-icons">
-            <img src="img/paypal.png" alt="PayPal" />
-            <img src="img/visa.png" alt="Visa" />
-            <img src="img/card.png" alt="Mastercard" />
-          </div>
-        </div>
-      </footer>
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-nav">
+        <div>
+          <h4>DAMEN</h4>
+          <ul>
+            <li><a href="#">Kleider</a></li>
+            <li><a href="#">Jacken</a></li>
+            <li><a href="#">Accessoires</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>HERREN</h4>
+          <ul>
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Hosen</a></li>
+            <li><a href="#">Schuhe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>SERVICE</h4>
+          <ul>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Versand</a></li>
+            <li><a href="#">Rückgabe</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Luna Mode. Alle Rechte vorbehalten.</p>
+        <div class="payment-icons">
+          <img src="img/paypal.png" alt="PayPal" />
+          <img src="img/visa.png" alt="Visa" />
+          <img src="img/card.png" alt="Mastercard" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
