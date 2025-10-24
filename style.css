@@ -13,6 +13,10 @@
   --radius: 12px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
@@ -103,7 +107,8 @@ body {
 
 /*  Kollektion Section */
 .kollektion {
-  padding: 100px 80px;
+  /* padding: 100px 80px; */
+  padding: 80px 10vw;
   background-color: #fff;
   color: var(--color-dark);
   text-align: center;
@@ -176,6 +181,12 @@ body {
   margin-bottom: 15px;
 }
 
+/* Kollektion responsive */
+@media (max-width: 480px) {
+  .kollektion-intro p {
+    font-size: 1rem;
+  }
+}
 /* --- Video Section --- */
 
 .video-section {

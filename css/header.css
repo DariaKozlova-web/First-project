@@ -1,11 +1,10 @@
 /* ====== Header Styling ====== */
 header {
-  position: fixed; /* Fixiert den Header am oberen Rand */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Volle Breite */
+  width: 100%;
   background-color: white;
-  /* color: #800020; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,4 +38,11 @@ nav ul li a {
 /* Hover-Effekt */
 nav ul li a:hover {
   color: #fae0e0;
+}
+
+/*  Nur Home auf Mobile ausblenden  */
+@media (max-width: 768px) {
+  nav ul li:first-child {
+    display: none;
+  }
 }
