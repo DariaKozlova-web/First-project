@@ -196,11 +196,24 @@ body {
 }
 
 .video-section h2 {
+  font-size: 2.8rem;
   color: var(--color-main);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.video-description {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  margin-bottom: 60px;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .video-wrapper {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,6 +224,7 @@ body {
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16/9;
+  margin: 0 auto;
 }
 
 .video-container iframe {
@@ -221,24 +235,27 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Vorteile Section --- */
 .vorteile {
-  padding: 60px 20px;
+  padding: 100px 80px;
   text-align: center;
 }
 
 .vorteile h2 {
+  font-size: 2.8rem;
   color: var(--color-main);
   margin-bottom: 40px;
 }
 
 .vorteile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .vorteil-item {
   background: var(--color-light);
+  color: var(--color-dark);
   border-radius: var(--radius);
   padding: 20px;
   transition: transform 0.3s ease;
@@ -249,9 +266,15 @@ body {
 }
 
 .vorteil-item img {
-  width: 2rem;
-  height: 2rem;
+  width: 50px;
+  height: 50px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  filter: invert(15%) sepia(30%) saturate(50%) hue-rotate(330deg);
+}
+
+.vorteil-item:hover img {
+  transform: scale(1.1);
 }
 
 /* --- Kontaktformular --- */
@@ -262,8 +285,15 @@ body {
 }
 
 .kontakt h2 {
+  font-size: 2.8rem;
   color: var(--color-main);
   margin-bottom: 10px;
+}
+
+.kontakt p {
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  margin-bottom: 60px;
 }
 
 .kontakt-form {
@@ -274,34 +304,43 @@ body {
   gap: 15px;
 }
 
+.kontakt-form label {
+  color: var(--color-dark);
+  font-size: 1rem;
+}
+
 .kontakt-form input,
 .kontakt-form textarea {
+  font-family: inherit;
   padding: 12px;
-  border-radius: var(--radius);
+  border-radius: 40px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
 .kontakt-form button {
+  margin-top: 40px;
   background: var(--color-main);
-  color: white;
-  padding: 12px;
+  color: var(--color-light);
+  padding: 14px 40px;
   border: none;
-  border-radius: var(--radius);
+  border-radius: 40px;
+  font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .kontakt-form button:hover {
-  background: var(--color-secondary);
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
 }
 
 /* --- Footer --- */
 .footer {
   background: var(--color-dark);
   color: #fff;
-  padding: 40px 20px;
+  padding: 100px 80px;
 }
 
 .footer-nav {
@@ -349,7 +388,45 @@ body {
 }
 
 /* --- Responsiveness --- */
+@media (max-width: 1000px) {
+  .vorteile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .vorteile,
+  .footer {
+    padding: 60px 20px;
+  }
+  .kollektion-intro h2,
+  .video-section h2,
+  .vorteile h2,
+  .kontakt h2 {
+    font-size: 2rem;
+  }
+
+  .vorteile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vorteil-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 600px) {
+  .kollektion-intro h2,
   .video-section h2,
   .vorteile h2,
   .kontakt h2 {
@@ -362,5 +439,11 @@ body {
 
   .footer-bottom {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .vorteile-grid {
+    grid-template-columns: 1fr;
   }
 }
