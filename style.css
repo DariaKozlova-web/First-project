@@ -249,8 +249,8 @@ body {
 
 .vorteile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .vorteil-item {
@@ -388,12 +388,19 @@ body {
 }
 
 /* --- Responsiveness --- */
+@media (max-width: 1000px) {
+  .vorteile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .vorteile,
   .footer {
     padding: 60px 20px;
   }
-
+  .kollektion-intro h2,
+  .video-section h2,
   .vorteile h2,
   .kontakt h2 {
     font-size: 2rem;
@@ -401,6 +408,11 @@ body {
 
   .vorteile-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .vorteil-item img {
+    width: 35px;
+    height: 35px;
   }
 
   .footer-nav {
@@ -414,6 +426,7 @@ body {
 }
 
 @media (max-width: 600px) {
+  .kollektion-intro h2,
   .video-section h2,
   .vorteile h2,
   .kontakt h2 {
